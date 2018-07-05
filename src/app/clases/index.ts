@@ -1,2 +1,2 @@
 export { ListaItem } from './lista-item';
-export { Lista } from './Listas';
+export { Lista } from './listas';

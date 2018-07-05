@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Lista } from '../clases/Listas';
+import { Lista } from '../clases/listas';
 
 
 
