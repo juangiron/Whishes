@@ -1,11 +1,25 @@
 import { Component, OnInit } from '@angular/core';
+import { ListaServices } from '../../app/services/lista.services';
+import { NavController } from 'ionic-angular';
+import { AgregarComponent } from '../agregar/agregar.component';
+import { Lista } from '../../app/clases';
+import { DetalleComponent } from '../detalle/detalle.component';
 
 @Component({
     selector: 'app-terminados',
     templateUrl: './terminados.component.html'
 })
 export class terminadosComponent implements OnInit {
-    constructor() { }
+    constructor(private _listaService: ListaServices,
+                private navctrl : NavController) { }
 
     ngOnInit(): void { }
+
+    irAgregar(){
+        this.navctrl.push( AgregarComponent )
+    }
+
+    verDetalle(lista, i){
+        this.navctrl.push( DetalleComponent,{lista,i} )
+    }
 }
